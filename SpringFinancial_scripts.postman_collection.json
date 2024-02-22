@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "752f59ab-7beb-4121-9618-b536bd5c940a",
+		"name": "Softprime_scripts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24262525"
+	},
+	"item": [
+		{
+			"name": "create_partner",
+			"item": []
+		},
+		{
+			"name": "GEt_countries",
+			"item": []
+		},
+		{
+			"name": "http://192.168.5.139:8017/api/create_partner",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Transfer-Encoding",
+						"value": "application/ecmascript",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Test\", \"phone\": \"204 556 6565\", \"email\": \"test@gmail.com\", \"street\":\"125Milross Ave\", \"city\": \"Vancouver\", \"zip\": \"7VG XG8\", \"state\": \"BC\", \"country\": \"Canada\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.5.139:8017/api/create_partner",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"5",
+						"139"
+					],
+					"port": "8017",
+					"path": [
+						"api",
+						"create_partner"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://192.168.5.139:8017/api/create_partner",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Transfer-Encoding",
+								"value": "application/ecmascript",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Test\", \"phone\": \"204 556 6565\", \"email\": \"test@gmail.com\", \"street\":\"125Milross Ave\", \"city\": \"Vancouver\", \"zip\": \"7VG XG8\", \"state\": \"BC\", \"country\": \"Canada\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.5.139:8017/api/create_partner",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"5",
+								"139"
+							],
+							"port": "8017",
+							"path": [
+								"api",
+								"create_partner"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "77"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.0.2 Python/3.10.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Jan 2024 18:31:19 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jsonrpc\": \"2.0\",\n    \"id\": null,\n    \"result\": {\n        \"success\": true,\n        \"partner_id\": 84\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "http://192.168.5.139:8017/jsonrpc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.api+json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"jsonrpc\": \"2.0\",\n\"method\": \"call\",\n\"params\": {\n\"db\":\"crm\",\n\"uid\":2,\n\"password\":\"webkul\",\n\"service\": \"object\",\n\"method\": \"execute_kw\",\n\"args\": [\n\"crm\",\n2,\n\"webkul\",\n\"res.country\",\n\"search_read\",\n[],\n{\n\"fields\": [\"name\",\"id\"]\n}\n \n\n\n]\n}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.5.139:8017/jsonrpc",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"5",
+						"139"
+					],
+					"port": "8017",
+					"path": [
+						"jsonrpc"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://192.168.5.139:8017/jsonrpc",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"jsonrpc\": \"2.0\",\n\"method\": \"call\",\n\"params\": {\n\"db\":\"crm\",\n\"uid\":2,\n\"password\":\"webkul\",\n\"service\": \"object\",\n\"method\": \"execute_kw\",\n\"args\": [\n\"crm\",\n2,\n\"webkul\",\n\"res.country\",\n\"search_read\",\n[],\n{\n\"fields\": [\"name\",\"id\"]\n}\n \n\n\n]\n}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.5.139:8017/jsonrpc",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"5",
+								"139"
+							],
+							"port": "8017",
+							"path": [
+								"jsonrpc"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "8760"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.0.2 Python/3.10.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 30 Jan 2024 18:35:29 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jsonrpc\": \"2.0\",\n    \"id\": null,\n    \"result\": [\n        {\n            \"id\": 3,\n            \"name\": \"Afghanistan\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Albania\"\n        },\n        {\n            \"id\": 62,\n            \"name\": \"Algeria\"\n        },\n        {\n            \"id\": 11,\n            \"name\": \"American Samoa\"\n        },\n        {\n            \"id\": 1,\n            \"name\": \"Andorra\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Angola\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Anguilla\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Antarctica\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Antigua and Barbuda\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Argentina\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Armenia\"\n        },\n        {\n            \"id\": 14,\n            \"name\": \"Aruba\"\n        },\n        {\n            \"id\": 13,\n            \"name\": \"Australia\"\n        },\n        {\n            \"id\": 12,\n            \"name\": \"Austria\"\n        },\n        {\n            \"id\": 16,\n            \"name\": \"Azerbaijan\"\n        },\n        {\n            \"id\": 32,\n            \"name\": \"Bahamas\"\n        },\n        {\n            \"id\": 23,\n            \"name\": \"Bahrain\"\n        },\n        {\n            \"id\": 19,\n            \"name\": \"Bangladesh\"\n        },\n        {\n            \"id\": 18,\n            \"name\": \"Barbados\"\n        },\n        {\n            \"id\": 36,\n            \"name\": \"Belarus\"\n        },\n        {\n            \"id\": 20,\n            \"name\": \"Belgium\"\n        },\n        {\n            \"id\": 37,\n            \"name\": \"Belize\"\n        },\n        {\n            \"id\": 25,\n            \"name\": \"Benin\"\n        },\n        {\n            \"id\": 27,\n            \"name\": \"Bermuda\"\n        },\n        {\n            \"id\": 33,\n            \"name\": \"Bhutan\"\n        },\n        {\n            \"id\": 29,\n            \"name\": \"Bolivia\"\n        },\n        {\n            \"id\": 30,\n            \"name\": \"Bonaire, Sint Eustatius and Saba\"\n        },\n        {\n            \"id\": 17,\n            \"name\": \"Bosnia and Herzegovina\"\n        },\n        {\n            \"id\": 35,\n            \"name\": \"Botswana\"\n        },\n        {\n            \"id\": 34,\n            \"name\": \"Bouvet Island\"\n        },\n        {\n            \"id\": 31,\n            \"name\": \"Brazil\"\n        },\n        {\n            \"id\": 105,\n            \"name\": \"British Indian Ocean Territory\"\n        },\n        {\n            \"id\": 28,\n            \"name\": \"Brunei Darussalam\"\n        },\n        {\n            \"id\": 22,\n            \"name\": \"Bulgaria\"\n        },\n        {\n            \"id\": 21,\n            \"name\": \"Burkina Faso\"\n        },\n        {\n            \"id\": 24,\n            \"name\": \"Burundi\"\n        },\n        {\n            \"id\": 116,\n            \"name\": \"Cambodia\"\n        },\n        {\n            \"id\": 47,\n            \"name\": \"Cameroon\"\n        },\n        {\n            \"id\": 38,\n            \"name\": \"Canada\"\n        },\n        {\n            \"id\": 52,\n            \"name\": \"Cape Verde\"\n        },\n        {\n            \"id\": 123,\n            \"name\": \"Cayman Islands\"\n        },\n        {\n            \"id\": 40,\n            \"name\": \"Central African Republic\"\n        },\n        {\n            \"id\": 214,\n            \"name\": \"Chad\"\n        },\n        {\n            \"id\": 46,\n            \"name\": \"Chile\"\n        },\n        {\n            \"id\": 48,\n            \"name\": \"China\"\n        },\n        {\n            \"id\": 54,\n            \"name\": \"Christmas Island\"\n        },\n        {\n            \"id\": 39,\n            \"name\": \"Cocos (Keeling) Islands\"\n        },\n        {\n            \"id\": 49,\n            \"name\": \"Colombia\"\n        },\n        {\n            \"id\": 118,\n            \"name\": \"Comoros\"\n        },\n        {\n            \"id\": 42,\n            \"name\": \"Congo\"\n        },\n        {\n            \"id\": 45,\n            \"name\": \"Cook Islands\"\n        },\n        {\n            \"id\": 50,\n            \"name\": \"Costa Rica\"\n        },\n        {\n            \"id\": 97,\n            \"name\": \"Croatia\"\n        },\n        {\n            \"id\": 51,\n            \"name\": \"Cuba\"\n        },\n        {\n            \"id\": 53,\n            \"name\": \"Curaçao\"\n        },\n        {\n            \"id\": 55,\n            \"name\": \"Cyprus\"\n        },\n        {\n            \"id\": 56,\n            \"name\": \"Czech Republic\"\n        },\n        {\n            \"id\": 44,\n            \"name\": \"Côte d'Ivoire\"\n        },\n        {\n            \"id\": 41,\n            \"name\": \"Democratic Republic of the Congo\"\n        },\n        {\n            \"id\": 59,\n            \"name\": \"Denmark\"\n        },\n        {\n            \"id\": 58,\n            \"name\": \"Djibouti\"\n        },\n        {\n            \"id\": 60,\n            \"name\": \"Dominica\"\n        },\n        {\n            \"id\": 61,\n            \"name\": \"Dominican Republic\"\n        },\n        {\n            \"id\": 63,\n            \"name\": \"Ecuador\"\n        },\n        {\n            \"id\": 65,\n            \"name\": \"Egypt\"\n        },\n        {\n            \"id\": 209,\n            \"name\": \"El Salvador\"\n        },\n        {\n            \"id\": 87,\n            \"name\": \"Equatorial Guinea\"\n        },\n        {\n            \"id\": 67,\n            \"name\": \"Eritrea\"\n        },\n        {\n            \"id\": 64,\n            \"name\": \"Estonia\"\n        },\n        {\n            \"id\": 212,\n            \"name\": \"Eswatini\"\n        },\n        {\n            \"id\": 69,\n            \"name\": \"Ethiopia\"\n        },\n        {\n            \"id\": 72,\n            \"name\": \"Falkland Islands\"\n        },\n        {\n            \"id\": 74,\n            \"name\": \"Faroe Islands\"\n        },\n        {\n            \"id\": 71,\n            \"name\": \"Fiji\"\n        },\n        {\n            \"id\": 70,\n            \"name\": \"Finland\"\n        },\n        {\n            \"id\": 75,\n            \"name\": \"France\"\n        },\n        {\n            \"id\": 79,\n            \"name\": \"French Guiana\"\n        },\n        {\n            \"id\": 174,\n            \"name\": \"French Polynesia\"\n        },\n        {\n            \"id\": 215,\n            \"name\": \"French Southern Territories\"\n        },\n        {\n            \"id\": 76,\n            \"name\": \"Gabon\"\n        },\n        {\n            \"id\": 84,\n            \"name\": \"Gambia\"\n        },\n        {\n            \"id\": 78,\n            \"name\": \"Georgia\"\n        },\n        {\n            \"id\": 57,\n            \"name\": \"Germany\"\n        },\n        {\n            \"id\": 80,\n            \"name\": \"Ghana\"\n        },\n        {\n            \"id\": 81,\n            \"name\": \"Gibraltar\"\n        },\n        {\n            \"id\": 88,\n            \"name\": \"Greece\"\n        },\n        {\n            \"id\": 83,\n            \"name\": \"Greenland\"\n        },\n        {\n            \"id\": 77,\n            \"name\": \"Grenada\"\n        },\n        {\n            \"id\": 86,\n            \"name\": \"Guadeloupe\"\n        },\n        {\n            \"id\": 91,\n            \"name\": \"Guam\"\n        },\n        {\n            \"id\": 90,\n            \"name\": \"Guatemala\"\n        },\n        {\n            \"id\": 82,\n            \"name\": \"Guernsey\"\n        },\n        {\n            \"id\": 85,\n            \"name\": \"Guinea\"\n        },\n        {\n            \"id\": 92,\n            \"name\": \"Guinea-Bissau\"\n        },\n        {\n            \"id\": 93,\n            \"name\": \"Guyana\"\n        },\n        {\n            \"id\": 98,\n            \"name\": \"Haiti\"\n        },\n        {\n            \"id\": 95,\n            \"name\": \"Heard Island and McDonald Islands\"\n        },\n        {\n            \"id\": 236,\n            \"name\": \"Holy See (Vatican City State)\"\n        },\n        {\n            \"id\": 96,\n            \"name\": \"Honduras\"\n        },\n        {\n            \"id\": 94,\n            \"name\": \"Hong Kong\"\n        },\n        {\n            \"id\": 99,\n            \"name\": \"Hungary\"\n        },\n        {\n            \"id\": 108,\n            \"name\": \"Iceland\"\n        },\n        {\n            \"id\": 104,\n            \"name\": \"India\"\n        },\n        {\n            \"id\": 100,\n            \"name\": \"Indonesia\"\n        },\n        {\n            \"id\": 107,\n            \"name\": \"Iran\"\n        },\n        {\n            \"id\": 106,\n            \"name\": \"Iraq\"\n        },\n        {\n            \"id\": 101,\n            \"name\": \"Ireland\"\n        },\n        {\n            \"id\": 103,\n            \"name\": \"Isle of Man\"\n        },\n        {\n            \"id\": 102,\n            \"name\": \"Israel\"\n        },\n        {\n            \"id\": 109,\n            \"name\": \"Italy\"\n        },\n        {\n            \"id\": 111,\n            \"name\": \"Jamaica\"\n        },\n        {\n            \"id\": 113,\n            \"name\": \"Japan\"\n        },\n        {\n            \"id\": 110,\n            \"name\": \"Jersey\"\n        },\n        {\n            \"id\": 112,\n            \"name\": \"Jordan\"\n        },\n        {\n            \"id\": 124,\n            \"name\": \"Kazakhstan\"\n        },\n        {\n            \"id\": 114,\n            \"name\": \"Kenya\"\n        },\n        {\n            \"id\": 117,\n            \"name\": \"Kiribati\"\n        },\n        {\n            \"id\": 250,\n            \"name\": \"Kosovo\"\n        },\n        {\n            \"id\": 122,\n            \"name\": \"Kuwait\"\n        },\n        {\n            \"id\": 115,\n            \"name\": \"Kyrgyzstan\"\n        },\n        {\n            \"id\": 125,\n            \"name\": \"Laos\"\n        },\n        {\n            \"id\": 134,\n            \"name\": \"Latvia\"\n        },\n        {\n            \"id\": 126,\n            \"name\": \"Lebanon\"\n        },\n        {\n            \"id\": 131,\n            \"name\": \"Lesotho\"\n        },\n        {\n            \"id\": 130,\n            \"name\": \"Liberia\"\n        },\n        {\n            \"id\": 135,\n            \"name\": \"Libya\"\n        },\n        {\n            \"id\": 128,\n            \"name\": \"Liechtenstein\"\n        },\n        {\n            \"id\": 132,\n            \"name\": \"Lithuania\"\n        },\n        {\n            \"id\": 133,\n            \"name\": \"Luxembourg\"\n        },\n        {\n            \"id\": 147,\n            \"name\": \"Macau\"\n        },\n        {\n            \"id\": 141,\n            \"name\": \"Madagascar\"\n        },\n        {\n            \"id\": 155,\n            \"name\": \"Malawi\"\n        },\n        {\n            \"id\": 157,\n            \"name\": \"Malaysia\"\n        },\n        {\n            \"id\": 154,\n            \"name\": \"Maldives\"\n        },\n        {\n            \"id\": 144,\n            \"name\": \"Mali\"\n        },\n        {\n            \"id\": 152,\n            \"name\": \"Malta\"\n        },\n        {\n            \"id\": 142,\n            \"name\": \"Marshall Islands\"\n        },\n        {\n            \"id\": 149,\n            \"name\": \"Martinique\"\n        },\n        {\n            \"id\": 150,\n            \"name\": \"Mauritania\"\n        },\n        {\n            \"id\": 153,\n            \"name\": \"Mauritius\"\n        },\n        {\n            \"id\": 246,\n            \"name\": \"Mayotte\"\n        },\n        {\n            \"id\": 156,\n            \"name\": \"Mexico\"\n        },\n        {\n            \"id\": 73,\n            \"name\": \"Micronesia\"\n        },\n        {\n            \"id\": 138,\n            \"name\": \"Moldova\"\n        },\n        {\n            \"id\": 137,\n            \"name\": \"Monaco\"\n        },\n        {\n            \"id\": 146,\n            \"name\": \"Mongolia\"\n        },\n        {\n            \"id\": 139,\n            \"name\": \"Montenegro\"\n        },\n        {\n            \"id\": 151,\n            \"name\": \"Montserrat\"\n        },\n        {\n            \"id\": 136,\n            \"name\": \"Morocco\"\n        },\n        {\n            \"id\": 158,\n            \"name\": \"Mozambique\"\n        },\n        {\n            \"id\": 145,\n            \"name\": \"Myanmar\"\n        },\n        {\n            \"id\": 159,\n            \"name\": \"Namibia\"\n        },\n        {\n            \"id\": 168,\n            \"name\": \"Nauru\"\n        },\n        {\n            \"id\": 167,\n            \"name\": \"Nepal\"\n        },\n        {\n            \"id\": 165,\n            \"name\": \"Netherlands\"\n        },\n        {\n            \"id\": 160,\n            \"name\": \"New Caledonia\"\n        },\n        {\n            \"id\": 170,\n            \"name\": \"New Zealand\"\n        },\n        {\n            \"id\": 164,\n            \"name\": \"Nicaragua\"\n        },\n        {\n            \"id\": 161,\n            \"name\": \"Niger\"\n        },\n        {\n            \"id\": 163,\n            \"name\": \"Nigeria\"\n        },\n        {\n            \"id\": 169,\n            \"name\": \"Niue\"\n        },\n        {\n            \"id\": 162,\n            \"name\": \"Norfolk Island\"\n        },\n        {\n            \"id\": 120,\n            \"name\": \"North Korea\"\n        },\n        {\n            \"id\": 143,\n            \"name\": \"North Macedonia\"\n        },\n        {\n            \"id\": 148,\n            \"name\": \"Northern Mariana Islands\"\n        },\n        {\n            \"id\": 166,\n            \"name\": \"Norway\"\n        },\n        {\n            \"id\": 171,\n            \"name\": \"Oman\"\n        },\n        {\n            \"id\": 177,\n            \"name\": \"Pakistan\"\n        },\n        {\n            \"id\": 184,\n            \"name\": \"Palau\"\n        },\n        {\n            \"id\": 172,\n            \"name\": \"Panama\"\n        },\n        {\n            \"id\": 175,\n            \"name\": \"Papua New Guinea\"\n        },\n        {\n            \"id\": 185,\n            \"name\": \"Paraguay\"\n        },\n        {\n            \"id\": 173,\n            \"name\": \"Peru\"\n        },\n        {\n            \"id\": 176,\n            \"name\": \"Philippines\"\n        },\n        {\n            \"id\": 180,\n            \"name\": \"Pitcairn Islands\"\n        },\n        {\n            \"id\": 178,\n            \"name\": \"Poland\"\n        },\n        {\n            \"id\": 183,\n            \"name\": \"Portugal\"\n        },\n        {\n            \"id\": 181,\n            \"name\": \"Puerto Rico\"\n        },\n        {\n            \"id\": 186,\n            \"name\": \"Qatar\"\n        },\n        {\n            \"id\": 188,\n            \"name\": \"Romania\"\n        },\n        {\n            \"id\": 190,\n            \"name\": \"Russian Federation\"\n        },\n        {\n            \"id\": 191,\n            \"name\": \"Rwanda\"\n        },\n        {\n            \"id\": 187,\n            \"name\": \"Réunion\"\n        },\n        {\n            \"id\": 26,\n            \"name\": \"Saint Barthélémy\"\n        },\n        {\n            \"id\": 198,\n            \"name\": \"Saint Helena, Ascension and Tristan da Cunha\"\n        },\n        {\n            \"id\": 119,\n            \"name\": \"Saint Kitts and Nevis\"\n        },\n        {\n            \"id\": 127,\n            \"name\": \"Saint Lucia\"\n        },\n        {\n            \"id\": 140,\n            \"name\": \"Saint Martin (French part)\"\n        },\n        {\n            \"id\": 179,\n            \"name\": \"Saint Pierre and Miquelon\"\n        },\n        {\n            \"id\": 237,\n            \"name\": \"Saint Vincent and the Grenadines\"\n        },\n        {\n            \"id\": 244,\n            \"name\": \"Samoa\"\n        },\n        {\n            \"id\": 203,\n            \"name\": \"San Marino\"\n        },\n        {\n            \"id\": 192,\n            \"name\": \"Saudi Arabia\"\n        },\n        {\n            \"id\": 204,\n            \"name\": \"Senegal\"\n        },\n        {\n            \"id\": 189,\n            \"name\": \"Serbia\"\n        },\n        {\n            \"id\": 194,\n            \"name\": \"Seychelles\"\n        },\n        {\n            \"id\": 202,\n            \"name\": \"Sierra Leone\"\n        },\n        {\n            \"id\": 197,\n            \"name\": \"Singapore\"\n        },\n        {\n            \"id\": 210,\n            \"name\": \"Sint Maarten (Dutch part)\"\n        },\n        {\n            \"id\": 201,\n            \"name\": \"Slovakia\"\n        },\n        {\n            \"id\": 199,\n            \"name\": \"Slovenia\"\n        },\n        {\n            \"id\": 193,\n            \"name\": \"Solomon Islands\"\n        },\n        {\n            \"id\": 205,\n            \"name\": \"Somalia\"\n        },\n        {\n            \"id\": 247,\n            \"name\": \"South Africa\"\n        },\n        {\n            \"id\": 89,\n            \"name\": \"South Georgia and the South Sandwich Islands\"\n        },\n        {\n            \"id\": 121,\n            \"name\": \"South Korea\"\n        },\n        {\n            \"id\": 207,\n            \"name\": \"South Sudan\"\n        },\n        {\n            \"id\": 68,\n            \"name\": \"Spain\"\n        },\n        {\n            \"id\": 129,\n            \"name\": \"Sri Lanka\"\n        },\n        {\n            \"id\": 182,\n            \"name\": \"State of Palestine\"\n        },\n        {\n            \"id\": 195,\n            \"name\": \"Sudan\"\n        },\n        {\n            \"id\": 206,\n            \"name\": \"Suriname\"\n        },\n        {\n            \"id\": 200,\n            \"name\": \"Svalbard and Jan Mayen\"\n        },\n        {\n            \"id\": 196,\n            \"name\": \"Sweden\"\n        },\n        {\n            \"id\": 43,\n            \"name\": \"Switzerland\"\n        },\n        {\n            \"id\": 211,\n            \"name\": \"Syria\"\n        },\n        {\n            \"id\": 208,\n            \"name\": \"São Tomé and Príncipe\"\n        },\n        {\n            \"id\": 227,\n            \"name\": \"Taiwan\"\n        },\n        {\n            \"id\": 218,\n            \"name\": \"Tajikistan\"\n        },\n        {\n            \"id\": 228,\n            \"name\": \"Tanzania\"\n        },\n        {\n            \"id\": 217,\n            \"name\": \"Thailand\"\n        },\n        {\n            \"id\": 223,\n            \"name\": \"Timor-Leste\"\n        },\n        {\n            \"id\": 216,\n            \"name\": \"Togo\"\n        },\n        {\n            \"id\": 219,\n            \"name\": \"Tokelau\"\n        },\n        {\n            \"id\": 222,\n            \"name\": \"Tonga\"\n        },\n        {\n            \"id\": 225,\n            \"name\": \"Trinidad and Tobago\"\n        },\n        {\n            \"id\": 221,\n            \"name\": \"Tunisia\"\n        },\n        {\n            \"id\": 224,\n            \"name\": \"Turkey\"\n        },\n        {\n            \"id\": 220,\n            \"name\": \"Turkmenistan\"\n        },\n        {\n            \"id\": 213,\n            \"name\": \"Turks and Caicos Islands\"\n        },\n        {\n            \"id\": 226,\n            \"name\": \"Tuvalu\"\n        },\n        {\n            \"id\": 232,\n            \"name\": \"USA Minor Outlying Islands\"\n        },\n        {\n            \"id\": 230,\n            \"name\": \"Uganda\"\n        },\n        {\n            \"id\": 229,\n            \"name\": \"Ukraine\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"United Arab Emirates\"\n        },\n        {\n            \"id\": 231,\n            \"name\": \"United Kingdom\"\n        },\n        {\n            \"id\": 233,\n            \"name\": \"United States\"\n        },\n        {\n            \"id\": 234,\n            \"name\": \"Uruguay\"\n        },\n        {\n            \"id\": 235,\n            \"name\": \"Uzbekistan\"\n        },\n        {\n            \"id\": 242,\n            \"name\": \"Vanuatu\"\n        },\n        {\n            \"id\": 238,\n            \"name\": \"Venezuela\"\n        },\n        {\n            \"id\": 241,\n            \"name\": \"Vietnam\"\n        },\n        {\n            \"id\": 239,\n            \"name\": \"Virgin Islands (British)\"\n        },\n        {\n            \"id\": 240,\n            \"name\": \"Virgin Islands (USA)\"\n        },\n        {\n            \"id\": 243,\n            \"name\": \"Wallis and Futuna\"\n        },\n        {\n            \"id\": 66,\n            \"name\": \"Western Sahara\"\n        },\n        {\n            \"id\": 245,\n            \"name\": \"Yemen\"\n        },\n        {\n            \"id\": 248,\n            \"name\": \"Zambia\"\n        },\n        {\n            \"id\": 249,\n            \"name\": \"Zimbabwe\"\n        },\n        {\n            \"id\": 15,\n            \"name\": \"Åland Islands\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}

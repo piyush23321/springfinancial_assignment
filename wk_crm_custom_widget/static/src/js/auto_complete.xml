@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="crm_field_customization.ApplicantCharField" t-inherit="web.CharField" t-inherit-mode="primary">
+        <xpath expr="//input[hasclass('o_input')]" position="attributes">
+            <attribute name="class" position="add" separator=" ">text-danger o_input</attribute>
+        </xpath>
+    </t>
+    <t t-name="crm_field_customization.Many2manyseletion" t-inherit="web.AutoComplete" t-inherit-mode="extension">
+        <xpath expr="//div/t[@t-if='displayOptions']/ul/t[@t-as='source']/t[@t-else='']//li" position="replace">
+            <div class="d-flex ps-2">
+                <input type="checkbox" name="product" t-att-id="option.id"/>
+                <li
+                                    class="o-autocomplete--dropdown-item ui-menu-item d-block"
+                                    t-att-class="option.classList"
+                                    t-on-mouseenter="() => this.onOptionMouseEnter([source_index, option_index])"
+                                    t-on-mouseleave="() => this.onOptionMouseLeave([source_index, option_index])"
+                                    t-on-click="() => this.onOptionClick([source_index, option_index])"
+                                >
+                                    <a
+                                        href="#"
+                                        class="dropdown-item ui-menu-item-wrapper text-truncate"
+                                        t-att-class="{ 'ui-state-active': isActiveSourceOption([source_index, option_index]) }"
+                                    >
+                                        <t t-if="source.optionTemplate">
+                                            <t t-call="{{ source.optionTemplate }}" />
+                                        </t>
+                                        <t t-else="">
+                                            <t t-esc="option.label" />
+                                        </t>
+                                    </a>
+                                </li>
+            </div>
+        </xpath>
+    </t>
+</templates>
