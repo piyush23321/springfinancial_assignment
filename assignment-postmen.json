@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "34db0e79-619d-4345-84e2-0c19bf68432f",
+		"name": "Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Partner",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\":\"Piyush Chauhan\",\n\"email\":\"piyush23321@gmail.com\",\n\"mobile\":\"7900563456\",\n\"street\":\"Sidharth Vihar\",\n\"zip\":\"244001\",\n\"city\":\"Ghaziabad\",\n\"country_id\":\"INDIA\",\n\"state_id\":\"uttar pradesh\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.5.20:8017/create/partner",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"5",
+						"20"
+					],
+					"port": "8017",
+					"path": [
+						"create",
+						"partner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Country",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"call\",\n    \"params\": {\n        \"db\": \"crm_field_customization\",\n        \"uid\": 2,\n        \"password\": \"admin\",\n        \"service\": \"object\",\n        \"method\": \"execute_kw\",\n        \"args\": [\n            \"crm_field_customization\",\n            2,\n            \"admin\",\n            \"res.country\",\n            \"search_read\",\n            [],\n            {\n                \"fields\": [\n                    \"name\",\n                    \"id\"\n                ]\n            }\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.5.20:8017/jsonrpc",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"5",
+						"20"
+					],
+					"port": "8017",
+					"path": [
+						"jsonrpc"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

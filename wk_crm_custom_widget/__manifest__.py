@@ -1,6 +1,6 @@
 {
-    "name" : 'CRM fields Customization',
-    'summery':'Custome CRM customization with custome api etc.',
+    "name" : 'Odoo crm custom widget',
+    'summery':'Odoo crm custom widget',
     'category':'CRM',
     'sequence':1,
     "version":  "1.0.0",

@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="crm_inherit_crm_lead" model="ir.ui.view">
-        <field name="name">crm.lead.view.form.inherit</field>
+    <record id="inherit_crm_lead_view_form" model="ir.ui.view">
+        <field name="name">inherit.crm.lead.view.form</field>
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_lead_view_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='phone']" position="after">
+            <xpath expr="//field[@name='lost_reason_id']" position="before">
                 <field name="opportunity_type" />
-                <field name="technology_name" invisible="opportunity_type == 'business'"/>
-                <field name="business_name" invisible="opportunity_type == 'technology'"/>
-                <field name='complete' invisible='1'/>
+                <field name='is_completed' invisible='1'/>
+                <field name="technology_name" invisible="opportunity_type != 'technology'"/>
+                <field name="business_name" invisible="opportunity_type != 'business'"/>
             </xpath>
+
+
             <xpath expr="//field[@name='stage_id']" position="after">
-                <field name="lead_stage_id" widget="statusbar_duration"
-                options="{'clickable': '1'}"
-                invisible="not active or type == 'opportunity'"/>
+                <field name="custom_stage_id" widget="statusbar_duration" options="{'clickable': '1'}" invisible="not active or type == 'opportunity'"/>
             </xpath>
-            <xpath expr="//header/button[@name='%(crm.action_crm_lead2opportunity_partner)d']" position="attributes">
-                <attribute name="invisible">not complete</attribute>
-            </xpath>
+
             <xpath expr="//header/button[@name='%(crm.action_crm_lead2opportunity_partner)d']" position="before">
-                <button name="action_set_lead_complete" string="Complete"
-                    type="object" class="oe_highlight" data-hotkey="w" title="Mark as Complete"
-                    invisible="not active or complete == True or type == 'opportunity'"/>
-            </xpath>           
+                <button name="action_mark_to_complete" string="Complete" type="object" class="oe_highlight" data-hotkey="w" title="Mark as Complete" invisible="not active or is_completed or type == 'opportunity'"/>
+            </xpath>
+
+            <xpath expr="//header/button[@name='%(crm.action_crm_lead2opportunity_partner)d']" position="attributes">
+                <attribute name="invisible">not is_completed</attribute>
+            </xpath>
+
         </field>
     </record>
 </odoo>
